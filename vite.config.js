@@ -28,5 +28,10 @@ export default defineConfig({
             },
         },
         cssCodeSplit: true,
+        rollupOptions: {
+          output: {
+            manualChunks: undefined,
+          },
+        },
     },
 });
