@@ -1,0 +1,1 @@
+console.log('Admin panel page admin.js loaded!');
