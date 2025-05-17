@@ -13,7 +13,11 @@
         <header class="bg-gray-800 text-white p-4">
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="{{ url('/') }}" class="hover:text-gray-400">Home</a></li>
+                    <li>
+                        <a href="{{ url('/') }}" class="hover:text-gray-400">
+                            <x-icon name="globe" width="12" height="12" class="text-gray-600" /> Home
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>

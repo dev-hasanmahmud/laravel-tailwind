@@ -15,12 +15,12 @@
                 <ul class="flex space-x-4">
                     <li>
                     	<a href="{{ url('/') }}" class="hover:text-gray-400">
-	                    	<x-icon name="user" width="16" height="16" class="text-gray-600" /> Users
+	                    	<x-icon name="user" width="12" height="12" class="text-gray-600" /> Users
 	                    </a>
                     </li>
                     <li>
                     	<a href="{{ url('/') }}" class="hover:text-gray-400">
-		                    <x-icon name="settings" width="16" height="16" class="text-gray-800" /> Settings
+		                    <x-icon name="settings" width="12" height="12" class="text-gray-800" /> Settings
 		                </a>
                 	</li>
                 </ul>

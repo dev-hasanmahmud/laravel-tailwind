@@ -1,8 +1,17 @@
 import $ from 'jquery';
-import { createIcons, icons } from 'lucide';
+import { 
+    createIcons, 
+    User, 
+    Settings,
+} from 'lucide';
 
 document.addEventListener('DOMContentLoaded', () => {
-    createIcons({ icons });
+    createIcons({
+      icons: {
+        User,
+        Settings,
+      }
+    });
 });
 
 $(function () {
