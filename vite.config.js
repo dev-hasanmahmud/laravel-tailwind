@@ -7,6 +7,8 @@ export default defineConfig({
             input: [
                 'resources/css/admin-panel.css',
                 'resources/js/admin-panel.js',
+                'resources/css/admin.css',
+                'resources/js/admin.js',
                 'resources/css/website.css',
                 'resources/js/website.js',
                 'resources/css/web.css',
@@ -15,4 +17,16 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    build: {
+        minify: 'terser',
+        terserOptions: {
+            compress: {
+                drop_console: true,
+            },
+            output: {
+                comments: false,
+            },
+        },
+        cssCodeSplit: true,
+    },
 });
