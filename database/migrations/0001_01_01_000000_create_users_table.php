@@ -11,14 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // affiliates, advertisers, admins
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->id()->comment('Primary key');
+            $table->string('name')->comment('Full name');
+            $table->string('email')->unique()->comment('Unique login email');
+            $table->enum('role', ['affiliate', 'advertiser', 'admin'])->nullable()->comment('Account role');
+            $table->timestamp('email_verified_at')->nullable()->comment('Email verified date');
+            $table->string('password')->comment('Hashed password');
+            $table->rememberToken()->comment('Remember token');
+            $table->integer('created_by')->nullable()->comment('Account created by');
+            $table->integer('updated_by')->nullable()->comment('Account updated by');
+            $table->timestamp('created_at')->nullable()->comment('Account created date');
+            $table->timestamp('updated_at')->nullable()->comment('Account updated date');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

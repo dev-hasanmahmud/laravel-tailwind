@@ -11,6 +11,10 @@
         <h4 class="text-2xl font-semibold mb-4 title">Welcome to the Admin Panel.</h4>
         <p>Here you can manage your admin panel data.</p>
     </div>
+    
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
 @endsection
 
 @push('scripts')
